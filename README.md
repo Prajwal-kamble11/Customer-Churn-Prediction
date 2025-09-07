@@ -1,7 +1,11 @@
 # 🏦 Customer Churn Prediction
 
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen)](https://customer-churn-prediction-6gqbaw2etqmzxhxa5hsdjh.streamlit.app/)  
+
 This project predicts **customer churn** (whether a bank customer will leave the bank or not) using **Machine Learning** and **Deep Learning**.  
 It includes a **Streamlit web app** for interactive predictions.
+
+**Try it here:** [https://customer-churn-prediction-6gqbaw2etqmzxhxa5hsdjh.streamlit.app/](https://customer-churn-prediction-6gqbaw2etqmzxhxa5hsdjh.streamlit.app/)
 
 ---
 
