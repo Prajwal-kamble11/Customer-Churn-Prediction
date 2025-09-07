@@ -11,8 +11,8 @@ model=tf.keras.models.load_model('model.h5')
 ## load encoder and scaler
 with open('onehot_encoder_geo.pkl','rb') as file:
     onehot_encoder_geo = pickle.load(file)
-with open('Lable_encoder_gender.pkl','rb') as file:
-    Lable_encoder_gender = pickle.load(file)
+with open('lable_encoder_gender.pkl','rb') as file:
+    lable_encoder_gender = pickle.load(file)
 with open('scaler.pkl','rb') as file:
     scaler = pickle.load(file)
 
@@ -24,7 +24,7 @@ st.title('Customer Churn Prediction')
 
 #user input
 geography = st.selectbox('Geography',onehot_encoder_geo.categories_[0])
-gender = st.selectbox('Gender',Lable_encoder_gender.classes_)
+gender = st.selectbox('Gender',lable_encoder_gender.classes_)
 age = st.slider('Age', 18, 92)
 balance = st.number_input('Balance')
 credit_score = st.slider('Credit Score')
@@ -37,7 +37,7 @@ is_active_member = st.selectbox('Is Active Member', [0, 1])
 # prepare the input data
 input_data = pd.DataFrame({
     'CreditScore': [credit_score],
-    'Gender': [Lable_encoder_gender.transform([gender])[0]],
+    'Gender': [lable_encoder_gender.transform([gender])[0]],
     'Age': [age],
     'Tenure': [tenure],
     'Balance': [balance],
@@ -69,4 +69,5 @@ st.write(f'Prediction Probability: {prediction_prob:.2f}')
 if prediction_prob > 0.5:
     st.write('The customer is likely to churn.')
 else:
+
     st.write('The customer is not likely to churn.')
