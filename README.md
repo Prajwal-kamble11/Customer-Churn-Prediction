@@ -27,4 +27,48 @@ It includes a **Streamlit web app** for interactive predictions.
 ---
 
 ## 📂 Project Structure
+```
+├── app.py # Streamlit app
+├── model.h5 # Trained churn prediction model
+├── scaler.pkl # Saved StandardScaler
+├── onehot_encoder_geo.pkl # OneHotEncoder for Geography
+├── label_encoder_gender.pkl # LabelEncoder for Gender
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
+```
+---
+
+## ⚙️ Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/customer-churn-prediction.git
+   cd customer-churn-prediction
+   ```
+2. Create a virtual environment (recommended):
+     ```bash
+     python -m venv venv
+     ```
+3. Activate the virtual environment:
+   - On Mac/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+   - On Windows:
+      ```bash
+      venv\Scripts\activate
+      ```
+4. Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+--- 
+
+▶️ Usage
+
+Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+ 
